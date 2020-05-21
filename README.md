@@ -1,16 +1,15 @@
-<h2 align="center">
+<p align="center">
 <img src="./frontend/src/assets/logo.svg">
-<br/><br/>
-<img src="./media/example1.png" width="auto" heigh="auto">
-</h2>
+</p>
+<center><img src="./media/example1.png" width="auto" heigh="500"></center>
 
-<h3 align="center">Simple Instagram clone
+<h3 align="center">Simple Instagram clone </h3>
 
 ---
 
-##:beginner: Examples
+## :beginner: Examples
 
-<b style="font-size:20px;">Showing application routes
+<b style="font-size:20px;">Showing application routes</b>
 <h3 align="center">
   <img src="./media/example1.png">
 </h3>
@@ -18,31 +17,31 @@
   <img src="./media/example2.png">
 </h3>
 
-<b style="font-size:20px;">Showing the feature to create a post and like it, in real time.
+<b style="font-size:20px;">Showing the feature to create a post and like it, in real time.</b>
 <h3 align="center">
   <img src="./media/example1.gif">
 </h3>
 
 
-<b style="font-size:20px;">Showing the feature of giving likes in real time with the changes saved in the database.
+<b style="font-size:20px;">Showing the feature of giving likes in real time with the changes saved in the database.</b>
 <h3 align="center">
   <img src="./media/example2.gif">
 </h3>
 
-<b style="font-size:20px;">Showing the feature of creating a post and liking it in real time, with two users at the same time!
+<b style="font-size:20px;">Showing the feature of creating a post and liking it in real time, with two users at the same time! </b>
 <h3 align="center">
   <img src="./media/example3.gif" width="auto" height="auto">
 </h3>
 
 ---
 
-##:notebook: About the project:
+## :notebook: About the project:
 
 A simple Instagram clone, with the features of like, create a new post, and list all posts! All in real-time, using WebSockets.
 
 ---
 
-##:book: What i learned ?
+## :book: What i learned ?
 1. The concept of API.
 2. MVC architecture.
 3. WebSockets.
@@ -55,7 +54,7 @@ A simple Instagram clone, with the features of like, create a new post, and list
 
 ---
 
-##:hammer: Built with technologies:
+## :hammer: Built with technologies:
 
 - JS
 - React
@@ -66,7 +65,7 @@ A simple Instagram clone, with the features of like, create a new post, and list
 
 ---
 
-##:rocket: Run this project:
+## :rocket: Run this project:
 
 To run this project on your machine, do:
 
@@ -105,7 +104,7 @@ $ npm install && npm start
 Open on your browser the address <a>```http://localhost:3000```</a>
 
 ---
-##:blue_book: Contributing
+## :blue_book: Contributing
 
 1. Fork it (<https://github.com/davioliveira-dev/instagram-clone/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
@@ -115,7 +114,7 @@ Open on your browser the address <a>```http://localhost:3000```</a>
 
 ---
 
-##:blue_heart: About me
+## :blue_heart: About me
 <a alt="Davi Oliveira - NPM" href="https://www.npmjs.com/~davioliveira-dev">
   <img src="https://img.shields.io/badge/NPM-davioliveira_dev-blue?logo=npm">
 </a>
