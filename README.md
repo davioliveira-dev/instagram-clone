@@ -121,6 +121,6 @@ Open on your browser the address <a>```http://localhost:3000```</a>
     <img src="https://img.shields.io/badge/LinkedIn-Davi Oliveira-blue?logo=linkedin"/>
 </a>
 <br>
-<a alt="Davi Oliveira - Twitter" href="https://www.linkedin.com/in/davioliveira-dev">
+<a alt="Davi Oliveira - Twitter" href="https://www.twitter.com/davioliveiradev">
     <img src="https://img.shields.io/badge/Twitter-davioliveiradev-blue?logo=twitter"/>
 </a>
