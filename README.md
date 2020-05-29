@@ -1,8 +1,6 @@
 <p align="center">
 <img src="./frontend/src/assets/logo.svg">
 </p>
-<center><img src="./media/example1.png" width="auto" heigh="500"></center>
-
 <h3 align="center">Simple Instagram clone </h3>
 
 ---
