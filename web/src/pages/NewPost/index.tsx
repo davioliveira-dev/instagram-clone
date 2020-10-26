@@ -47,6 +47,7 @@ export default function NewPost() {
     });
     toast.success('Post Criado!');
     setFormData({author: '', description: '', hashtags: '', place: ''});
+    window.location.replace('/');
 
     return <Redirect to='/' />;
   }
