@@ -2,7 +2,6 @@ import mongoose, {Document, Schema} from 'mongoose';
 import {v4 as uuidv4} from 'uuid';
 
 export interface IPost extends Document {
-  _id: string,
   author: string,
   place: string,
   description: string,
@@ -13,9 +12,10 @@ export interface IPost extends Document {
 }
 
 const PostSchema: Schema = new Schema({
-  _id: {
+  id: {
     type: String,
     default: uuidv4(),
+    unique: true,
   },
   author: {
     type: String,

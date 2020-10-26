@@ -27,6 +27,7 @@ class PostController {
   static async store(req: Request, res: Response, next: NextFunction) {
     const {author, place, description, hashtags} = req.body;
     const {filename: image} = req.file;
+
     const imagePath = req.file.path;
     const destination = req.file.destination;
 
@@ -34,14 +35,10 @@ class PostController {
         author, place, description, hashtags, image, imagePath, destination,
     );
 
-    this.socketResponse(post);
+    io.emit('post', post);
     next();
 
     return res.json(post);
-  }
-
-  static socketResponse(newPost: any) {
-    io.emit('post', newPost);
   }
 }
 

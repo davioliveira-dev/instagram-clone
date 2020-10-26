@@ -10,7 +10,9 @@ class PostStore {
   }
 
   static async getOne(postId) {
-    const post = await Post.findById(postId);
+    const post = await Post.find({
+      id: postId,
+    });
 
     if (post === null) {
       return [];
@@ -50,7 +52,9 @@ class PostStore {
   }
 
   static async getOneAndUpdateComment(postId, commentId) {
-    const post = await Post.findById(postId);
+    const post = await Post.findOne({
+      id: postId,
+    });
 
     if (post === null) {
       return [];

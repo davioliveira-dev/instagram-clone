@@ -2,7 +2,9 @@ import Post from '../models/Post';
 
 class LikeStore {
   static async create(postId: string) {
-    const post = await Post.findById(postId);
+    const post = await Post.findOne({
+      id: postId,
+    });
 
     if (post === null) {
       return [];

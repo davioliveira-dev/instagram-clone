@@ -1,15 +1,16 @@
 import mongoose from 'mongoose';
+import {v4 as uuidv4} from 'uuid';
 
 export interface IComment extends mongoose.Document {
-  _id: string,
   author: string,
   description: string,
 }
 
 const CommentSchema = new mongoose.Schema({
-  _id: {
+  id: {
     type: String,
-    required: true,
+    default: uuidv4(),
+    unique: true,
   },
   author: {
     type: String,
