@@ -59,7 +59,7 @@ $ npm install && npm start
 ---
 
 <b> IMPORTANT <b>
-I used MongoDB Atlas, if you want to get my MongoDB URL send me an sing [mailto](mailto: davioliveira.java@gmail.com)!
+I used MongoDB Atlas, if you want to get my MongoDB URL send me an email -> davioliveira.java@gmail.com !
 
 ---
 
