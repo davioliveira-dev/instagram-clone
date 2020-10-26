@@ -38,7 +38,9 @@ class CommentController {
     const postId = req.params.id;
 
     const comment = await CommentStore.create(author, description);
-    const post = await PostStore.getOneAndUpdateComment(postId, comment._id);
+    const post = await PostStore.getOneAndUpdateComment(
+        postId, comment.commentId,
+    );
 
     if (post === [] && post.length <= 0) {
       return res.status(404).json({message: 'Post not founded'});

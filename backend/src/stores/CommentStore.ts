@@ -5,7 +5,7 @@ import {v4 as uuidv4} from 'uuid';
 class CommentStore {
   static async getAll(postId: string) {
     const post = await Post.findOne({
-      id: postId,
+      postId,
     });
 
     if (post === null) {
