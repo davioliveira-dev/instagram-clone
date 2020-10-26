@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./frontend/src/assets/logo.svg">
+<img src="./web/src/assets/logo.svg">
 </p>
 <h3 align="center">Simple Instagram clone </h3>
 
@@ -99,6 +99,11 @@ Open on your browser the address <a>```http://localhost:3000```</a>
 <b style="font-size:20px;">Showing the feature of creating a post and liking it in real time, with two users at the same time! </b>
 <h3 align="center">
   <img src="./media/example3.gif" width="auto" height="auto">
+</h3>
+
+<b style="font-size:20px;"> NEW FEATURE !! :rocket: Now you can create comments!</b>
+<h3 align="center">
+  <img src="./media/comment.gif" width="auto" height="auto">
 </h3>
 
 ---
