@@ -8,7 +8,7 @@ interface ICommentsList extends JSX.ElementAttributesProperty {
 }
 
 export interface IComment {
-  _id: string,
+  commentId: string,
   author: string,
   description: string,
 }
@@ -47,6 +47,7 @@ export default function CommentsList(
       toast.error('Não foi possível conectar ao servidor!');
       console.log(error.message);
     });
+    setFormData({author: '', description: ''});
   }
 
   return (
@@ -56,7 +57,7 @@ export default function CommentsList(
         <NoneTitle>Nenhum comentário encontrado!</NoneTitle>
       ) : (
         comments.map((comment: IComment) => (
-          <Content key={comment._id}>
+          <Content key={comment.commentId}>
             <strong>Autor: {comment.author}</strong>
             <p>{comment.description}</p>
           </Content>

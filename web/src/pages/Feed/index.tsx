@@ -23,13 +23,13 @@ import like from '../../assets/like.svg';
 import comments from '../../assets/comment.svg';
 
 interface Post {
-  _id: string,
+  postId: string,
   author: string,
-  description: string,
   place: string,
+  description: string,
   hashtags: string,
-  likes: number,
   image: string,
+  likes: number,
   showComment: boolean,
   comments: [IComment]
 }
@@ -48,7 +48,7 @@ export default function Feed() {
   useEffect(() => {
     socket.on('like', (data: any) => {
       const likedPost = posts.map((post) =>
-        post._id === data._id ? data : post,
+        post.postId === data.postId ? data : post,
       );
       if (Array.isArray(likedPost) && likedPost.length >= 1) {
         setPosts(likedPost);
@@ -57,10 +57,14 @@ export default function Feed() {
   }, [posts, socket]);
 
   useEffect(() => {
-    socket.on('comment', (data: any) => {
-      const commentedPost = posts.map((post) =>
-        post._id === data._id ? data : post,
-      );
+    socket.on('comment', (data: Post) => {
+      const commentedPost: Post[] = posts.map((post) => {
+        if (post.comments !== data.comments) {
+          return data;
+        }
+        return post;
+      });
+
       if (Array.isArray(commentedPost) && commentedPost.length >= 1) {
         setPosts(commentedPost);
       }
@@ -91,7 +95,7 @@ export default function Feed() {
 
   function handleListComments(clickedPost: Post) {
     const changedPost = posts.map((post) => {
-      if (post._id === clickedPost._id) {
+      if (post.postId === clickedPost.postId) {
         clickedPost.showComment = !post.showComment;
         return clickedPost;
       }
@@ -114,7 +118,7 @@ export default function Feed() {
     <>
       <FeedList>
         {posts.map((post: Post) => (
-          <Article key={post._id}>
+          <Article key={post.postId}>
             <PostHeader>
               <UserInfo>
                 <span>{post.author}</span>
@@ -129,7 +133,7 @@ export default function Feed() {
                 </ArticleFooterDescription>
                 <LikeButton
                   blocked={blocked}
-                  onClick={()=> handleLike(post._id, true)}
+                  onClick={()=> handleLike(post.postId, true)}
                 >
                   <LikeIcon src={like} alt="Like"/>
                 </LikeButton>
@@ -141,7 +145,7 @@ export default function Feed() {
                 </CommentsButton>
               </ArticleActions>
               {post.showComment ? (
-                <CommentsList post={post._id} props={post._id} />
+                <CommentsList post={post.postId} props={post.postId} />
               ): null}
               <ArticleFooterHashtags>
                 {post.hashtags}
