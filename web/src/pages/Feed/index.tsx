@@ -58,13 +58,9 @@ export default function Feed() {
 
   useEffect(() => {
     socket.on('comment', (data: Post) => {
-      const commentedPost: Post[] = posts.map((post) => {
-        if (post.comments !== data.comments) {
-          return data;
-        }
-        return post;
-      });
-
+      const commentedPost = posts.map((post) =>
+        post.comments === data.comments ? data : post,
+      );
       if (Array.isArray(commentedPost) && commentedPost.length >= 1) {
         setPosts(commentedPost);
       }

@@ -1,6 +1,7 @@
 import React, {FormEvent, useEffect, useState} from 'react';
 import {toast} from 'react-toastify';
 import api from '../../services/api';
+import {socket} from '../../services/socket';
 import {Button, Content, Form, Input, NoneTitle, Title} from './styles';
 
 interface ICommentsList extends JSX.ElementAttributesProperty {
@@ -33,6 +34,17 @@ export default function CommentsList(
 
     loadComments();
   }, []);
+
+  useEffect(() => {
+    socket.on('comment', (data: any) => {
+      const commentedPost = comments.map((comment) =>
+        comment.commentId === data.comments[0].commentId ? data : post,
+      );
+      if (Array.isArray(commentedPost) && commentedPost.length >= 1) {
+        setComments(commentedPost);
+      }
+    });
+  }, [comments, socket]);
 
   const handleChange = (e: React.ChangeEvent<any>) => {
     setFormData({...formData, [e.target.name]: e.target.value});
