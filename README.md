@@ -57,8 +57,10 @@ With NPM
 $ npm install && npm start
 ```
 ---
+
 <b> IMPORTANT <b>
-I used MongoDB Atlas, if you want to get my MongoDB URL send me an <a href="mailto:davioliveira.java@gmail.com">email </a>!
+I used MongoDB Atlas, if you want to get my MongoDB URL send me an sing [mailto](mailto: davioliveira.java@gmail.com)!
+
 ---
 
 Enter the <strong> "web" </strong> folder and run the project with <a href=""> Yarn or NPM </a>, with the commands:
