@@ -1,5 +1,6 @@
 import Comment from '../models/Comment';
 import Post from '../models/Post';
+import {v4 as uuidv4} from 'uuid';
 
 class CommentStore {
   static async getAll(postId: string) {
@@ -12,7 +13,7 @@ class CommentStore {
     }
 
     const postComments = await Comment.find({
-      id: {
+      commentId: {
         $in: post.comments,
       },
     });
@@ -22,7 +23,7 @@ class CommentStore {
 
   static async getOne(commentId: string) {
     const comment = await Comment.findOne({
-      id: commentId,
+      commentId,
     });
 
     if (comment === null) {
@@ -33,7 +34,9 @@ class CommentStore {
   }
 
   static async create(author: string, description: string) {
+    const id = uuidv4();
     const comment = await Comment.create({
+      commentId: id,
       author,
       description,
     });

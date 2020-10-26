@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import sharp from 'sharp';
+import {v4 as uuidv4} from 'uuid';
 import Post from '../models/Post';
 
 class PostStore {
@@ -11,7 +12,7 @@ class PostStore {
 
   static async getOne(postId) {
     const post = await Post.find({
-      id: postId,
+      postId,
     });
 
     if (post === null) {
@@ -30,6 +31,7 @@ class PostStore {
       imagePath,
       destination,
   ) {
+    const postId = uuidv4();
     const [name] = image.split('.');
     const fileName = `${name}.jpg`;
 
@@ -41,6 +43,7 @@ class PostStore {
     fs.unlinkSync(imagePath);
 
     const post = await Post.create({
+      postId,
       author,
       place,
       description,
@@ -53,7 +56,7 @@ class PostStore {
 
   static async getOneAndUpdateComment(postId, commentId) {
     const post = await Post.findOne({
-      id: postId,
+      postId,
     });
 
     if (post === null) {

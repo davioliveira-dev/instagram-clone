@@ -3,7 +3,7 @@ import Post from '../models/Post';
 class LikeStore {
   static async create(postId: string) {
     const post = await Post.findOne({
-      id: postId,
+      postId,
     });
 
     if (post === null) {
