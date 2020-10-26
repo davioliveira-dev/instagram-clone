@@ -56,8 +56,12 @@ With NPM
 ```bash
 $ npm install && npm start
 ```
+---
+<b> IMPORTANT <b>
+I used MongoDB Atlas, if you want to get my MongoDB URL send me an <a href="mailto:davioliveira.java@gmail.com">email </a>!
+---
 
-Enter the <strong> "frontend" </strong> folder and run the project with <a href=""> Yarn or NPM </a>, with the commands:
+Enter the <strong> "web" </strong> folder and run the project with <a href=""> Yarn or NPM </a>, with the commands:
 
 With Yarn
 ```bash
