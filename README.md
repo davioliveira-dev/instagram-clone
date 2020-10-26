@@ -5,34 +5,6 @@
 
 ---
 
-## :beginner: Examples
-
-<b style="font-size:20px;">Showing application routes</b>
-<h3 align="center">
-  <img src="./media/example1.png">
-</h3>
-<h3 align="center">
-  <img src="./media/example2.png">
-</h3>
-
-<b style="font-size:20px;">Showing the feature to create a post and like it, in real time.</b>
-<h3 align="center">
-  <img src="./media/example1.gif">
-</h3>
-
-
-<b style="font-size:20px;">Showing the feature of giving likes in real time with the changes saved in the database.</b>
-<h3 align="center">
-  <img src="./media/example2.gif">
-</h3>
-
-<b style="font-size:20px;">Showing the feature of creating a post and liking it in real time, with two users at the same time! </b>
-<h3 align="center">
-  <img src="./media/example3.gif" width="auto" height="auto">
-</h3>
-
----
-
 ## :notebook: About the project:
 
 A simple Instagram clone, with the features of like, create a new post, and list all posts! All in real-time, using WebSockets.
@@ -100,6 +72,34 @@ $ npm install && npm start
 <b style="font-size:25px;"> And Finally: </b>
 
 Open on your browser the address <a>```http://localhost:3000```</a>
+
+---
+
+## :beginner: Examples
+
+<b style="font-size:20px;">Showing application routes</b>
+<h3 align="center">
+  <img src="./media/example1.png">
+</h3>
+<h3 align="center">
+  <img src="./media/example2.png">
+</h3>
+
+<b style="font-size:20px;">Showing the feature to create a post and like it, in real time.</b>
+<h3 align="center">
+  <img src="./media/example1.gif">
+</h3>
+
+
+<b style="font-size:20px;">Showing the feature of giving likes in real time with the changes saved in the database.</b>
+<h3 align="center">
+  <img src="./media/example2.gif">
+</h3>
+
+<b style="font-size:20px;">Showing the feature of creating a post and liking it in real time, with two users at the same time! </b>
+<h3 align="center">
+  <img src="./media/example3.gif" width="auto" height="auto">
+</h3>
 
 ---
 ## :blue_book: Contributing

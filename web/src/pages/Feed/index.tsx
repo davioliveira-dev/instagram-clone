@@ -58,21 +58,14 @@ export default function Feed() {
 
   useEffect(() => {
     socket.on('comment', (data: any) => {
-      console.log(data);
+      const commentedPost = posts.map((post) =>
+        post._id === data._id ? data : post,
+      );
+      if (Array.isArray(commentedPost) && commentedPost.length >= 1) {
+        setPosts(commentedPost);
+      }
     });
-  });
-
-  // }
-  // //   const commentedPost = posts.map((post) => {
-  // //   //   post.comments.map((comment) => {
-  // //   //     comment._id === data.comments.find(comment._id) ?
-  // console.log(data) :
-  // //   //     null;
-  // //   //   });
-  // //   // });
-  // //   // return commentedPost;
-  // //   console.log(post);
-  // // });
+  }, [posts, socket]);
 
   useEffect(() => {
     async function loadPosts() {
